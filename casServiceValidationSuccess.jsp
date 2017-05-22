@@ -5,7 +5,6 @@
 <c:if test="${not empty pgtIou}">
 		<cas:proxyGrantingTicket>${pgtIou}</cas:proxyGrantingTicket>
 </c:if>
-<!-- C:\Production_Runs\Tomcat8\webapps\sso\WEB-INF\view\jsp\protocol\2.0\casServiceValidationSuccess -->
 <cas:attributes>
     <c:forEach var="attr" items="${assertion.chainedAuthentications[fn:length(assertion.chainedAuthentications)-1].principal.attributes}">
          <cas:${fn:escapeXml(attr.key)}>${fn:escapeXml(attr.value)}</cas:${fn:escapeXml(attr.key)}>
